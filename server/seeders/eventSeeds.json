@@ -1,0 +1,72 @@
+[
+	{
+		"title": "What is Express.js?",
+		"description": "Express.js is a minimalist, fast, and flexible web framework for Node.js, designed for building web applications and APIs. It is one of the most popular frameworks for Node.js due to its simplicity, efficiency, and the vast ecosystem it supports.",
+		"date": "express",
+		"eventAuthor": "seed",
+		"username": "Emily Davis"
+	},
+	{
+		"title": "What is middleware in Express.js?",
+		"description": "Middleware functions are functions that have access to the request object (req), the response object (res), and the next middleware function in the application's request-response cycle.",
+		"date": "express",
+		"eventAuthor": "seed",
+		"username": "Emily Davis"
+	},
+	{
+		"title": "How do you define routes in Express.js?",
+		"description": "Routes in Express.js are defined by using the app.METHOD(path, handler) function, where METHOD is an HTTP request method such as GET, POST or PUT, and path is a path on the server such as /api/users/1.",
+		"date": "express",
+		"eventAuthor": "seed",
+		"username": "Emily Davis"
+	},
+	{
+		"title": "What is the purpose of app.use() in Express.js?",
+		"description": "The app.use() function is used to mount the specified middleware function or functions at the specified path. If path is not specified, it defaults to '/' and the middleware function is executed for every request to the app.",
+		"date": "express",
+		"eventAuthor": "seed",
+		"username": "Emily Davis"
+	},
+	{
+		"title": "How do you send a response in Express.js?",
+		"description": "In Express.js, you can use the res.send(body) or res.json(body) methods to send a response to the client. The res.send() method sends the HTTP response. The body parameter can be a string, buffer, object, or array. The res.json() method sends a JSON response. It converts the given parameter to a JSON string using JSON.stringify() and sets the Content-Type header to application/json.",
+		"date": "express",
+		"eventAuthor": "seed",
+		"username": "Emily Davis"
+	},
+	{
+		"title": "What is the purpose of the Express.js Router?",
+		"description": "The Express.js Router is a middleware that allows you to group your route handlers for a particular part of a site together and access them using a common route-prefix.",
+		"date": "express",
+		"eventAuthor": "seed",
+		"username": "Admin Jones"
+	},
+	{
+		"title": "How do you handle errors in Express.js?",
+		"description": "In Express.js, you can define error-handling middleware functions in the same way as other middleware functions, except with four arguments instead of three: (err, req, res, next).",
+		"date": "express",
+		"eventAuthor": "seed",
+		"username": "Admin Jones"
+	},
+	{
+		"title": "What is the purpose of the next() function in Express.js?",
+		"description": "The next() function is used to pass control to the next middleware function in the stack. If the current middleware function does not end the request-response cycle, it must call next() to pass control to the next middleware function.",
+		"date": "express",
+		"eventAuthor": "seed",
+		"username": "Admin Jones"
+	},
+	{
+		"title": "How do you serve static files in Express.js?",
+		"description": "In Express.js, you can use the express.static built-in middleware function to serve static files. You pass the name of the directory that contains the static assets to the express.static middleware function to start serving the files directly.",
+		"date": "express",
+		"eventAuthor": "seed",
+		"username": "Admin Jones"
+	},
+	{
+		"title": "What is a template engine in Express.js?",
+		"description": "A template engine enables you to use static template files in your application. At runtime, the template engine replaces variables in a template file with actual values, and transforms the template into an HTML file sent to the client.",
+		"date": "express",
+		"eventAuthor": "seed",
+		"username": "Admin Jones"
+	}
+]

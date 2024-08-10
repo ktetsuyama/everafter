@@ -1,0 +1,14 @@
+[
+	{
+		"username": "Admin Jones",
+		"email": "adminjones@testadmin.com",
+		"password": "AdminPW123",
+		"admin": "true"
+	},
+	{
+		"username": "Emily Davis",
+		"email": "emilydavis@example.com",
+		"password": "password01",
+		"admin": "false"
+	}
+]
