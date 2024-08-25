@@ -1,61 +1,61 @@
 [
 	{
-		"date": "What is Express.js?",
-		"photoUrl": "Express.js is a minimalist, fast, and flexible web framework for Node.js, designed for building web applications and APIs. It is one of the most popular frameworks for Node.js due to its simplicity, efficiency, and the vast ecosystem it supports.",
+		"date": "2000-01-01T07:00:00",
+		"photoUrl": "https://placedog.net/640/480?r",
 		"eventAuthor": "seed",
 		"username": "Emily Davis"
 	},
 	{
-		"date": "What is the syntax to delete documents in a collection?",
-		"photoUrl": "Use db.collection.deleteOne(filter) to delete a single document and db.collection.deleteMany(filter) to delete multiple documents.",
+		"date": "2000-01-01T07:00:00",
+		"photoUrl": "https://placedog.net/640/480?r",
 		"eventAuthor": "seed",
 		"username": "Emily Davis"
 	},
 	{
-		"date": "How do callback functions relate to Node.js?",
-		"photoUrl": "Callbacks are functions passed as arguments to other functions, allowing those functions to call back (execute) the passed function once they have completed their task. This is a fundamental aspect of asynchronous programming in Node.js.",
+		"date": "2000-01-01T07:00:00",
+		"photoUrl": "https://placedog.net/640/480?r",
 		"eventAuthor": "seed",
 		"username": "Emily Davis"
 	},
 	{
-		"date": "How do callback functions relate to Node.js?",
-		"photoUrl": "Callbacks are functions passed as arguments to other functions, allowing those functions to call back (execute) the passed function once they have completed their task. This is a fundamental aspect of asynchronous programming in Node.js.",
+		"date": "2000-01-01T07:00:00",
+		"photoUrl": "https://placedog.net/640/480?r",
 		"eventAuthor": "seed",
 		"username": "Emily Davis"
 	},
 	{
-		"date": "How do callback functions relate to Node.js?",
-		"photoUrl": "Callbacks are functions passed as arguments to other functions, allowing those functions to call back (execute) the passed function once they have completed their task. This is a fundamental aspect of asynchronous programming in Node.js.",
+		"date": "2000-01-01T07:00:00",
+		"photoUrl": "https://placedog.net/640/480?r",
 		"eventAuthor": "seed",
 		"username": "Emily Davis"
 	},
 	{
-		"date": "How do callback functions relate to Node.js?",
-		"photoUrl": "Callbacks are functions passed as arguments to other functions, allowing those functions to call back (execute) the passed function once they have completed their task. This is a fundamental aspect of asynchronous programming in Node.js.",
+		"date": "2000-01-01T07:00:00",
+		"photoUrl": "https://placedog.net/640/480?r",
 		"eventAuthor": "seed",
 		"username": "Admin Jones"
 	},
 	{
-		"date": "How do callback functions relate to Node.js?",
-		"photoUrl": "Callbacks are functions passed as arguments to other functions, allowing those functions to call back (execute) the passed function once they have completed their task. This is a fundamental aspect of asynchronous programming in Node.js.",
+		"date": "2000-01-01T07:00:00",
+		"photoUrl": "https://placedog.net/640/480?r",
 		"eventAuthor": "seed",
 		"username": "Admin Jones"
 	},
 	{
-		"date": "How do callback functions relate to Node.js?",
-		"photoUrl": "Callbacks are functions passed as arguments to other functions, allowing those functions to call back (execute) the passed function once they have completed their task. This is a fundamental aspect of asynchronous programming in Node.js.",
+		"date": "2000-01-01T07:00:00",
+		"photoUrl": "https://placedog.net/640/480?r",
 		"eventAuthor": "seed",
 		"username": "Admin Jones"
 	},
 	{
-		"date": "How do callback functions relate to Node.js?",
-		"photoUrl": "Callbacks are functions passed as arguments to other functions, allowing those functions to call back (execute) the passed function once they have completed their task. This is a fundamental aspect of asynchronous programming in Node.js.",
+		"date": "2000-01-01T07:00:00",
+		"photoUrl": "https://placedog.net/640/480?r",
 		"eventAuthor": "seed",
 		"username": "Admin Jones"
 	},
 	{
-		"date": "How do callback functions relate to Node.js?",
-		"photoUrl": "Callbacks are functions passed as arguments to other functions, allowing those functions to call back (execute) the passed function once they have completed their task. This is a fundamental aspect of asynchronous programming in Node.js.",
+		"date": "2000-01-01T07:00:00",
+		"photoUrl": "https://placedog.net/640/480?r",
 		"eventAuthor": "seed",
 		"username": "Admin Jones"
 	}

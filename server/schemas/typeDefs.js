@@ -40,6 +40,7 @@ const typeDefs = `
 		me: User
 		photos(username: String): [Photo]
 		photo(photoId: ID!): Photo
+		dates: [Date]
 	}
 
 	type Date {

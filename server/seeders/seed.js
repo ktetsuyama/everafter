@@ -6,6 +6,12 @@ const eventSeeds = require("./eventSeeds.json");
 const userSeeds = require("./userSeeds.json");
 const photoSeeds = require("./photoSeeds.json");
 
+const moment = require("moment-timezone");
+
+// Convert date strings to UTC
+const convertToUTC = (dateString, timezone) =>
+	moment.tz(dateString, timezone).utc().toISOString();
+
 db.once("open", async () => {
 	try {
 		await cleanDB("Photo", "photos");
@@ -24,9 +30,10 @@ db.once("open", async () => {
 		const adminUserId = adminUser._id;
 		console.log("Admin user seeded: ", adminUser.username);
 
-		// Map each event seed with the admin user ID for the createdBy field
-		const allEventSeeds = [...eventSeeds].map((event) => ({
+		// Convert event dates to UTC
+		const allEventSeeds = eventSeeds.map((event) => ({
 			...event,
+			date: convertToUTC(event.date, "America/New_York"),
 			createdBy: adminUserId,
 		}));
 
@@ -34,12 +41,27 @@ db.once("open", async () => {
 		const createdEvents = await Event.create(allEventSeeds);
 		console.log("Events seeded successfully");
 
+		// Log event dates
+		console.log(
+			"Stored events dates (UTC):",
+			createdEvents.map((e) => e.date)
+		);
+
+		// Convert photo dates to UTC
+		const allPhotoSeeds = photoSeeds.map((photo) => ({
+			...photo,
+			date: convertToUTC(photo.date, "America/New_York"),
+		}));
+
 		// Seed photos
-		const createdPhotos = await Photo.create(photoSeeds);
+		const createdPhotos = await Photo.create(allPhotoSeeds);
 
 		// Assign photos to users and events
-		for (let photoSeed of photoSeeds) {
+		for (let photoSeed of allPhotoSeeds) {
 			const { username, date } = photoSeed;
+
+			console.log("Looking for user with username:", username);
+			console.log("Looking for event with date:", date);
 
 			// Find the user based on the photoSeed's username
 			const user = users.find((u) => u.username === username);
@@ -48,8 +70,16 @@ db.once("open", async () => {
 			}
 
 			// Find the event based on the photoSeed's date
-			const event = createdEvents.find((c) => c.date === date);
+			const eventDate = new Date(date);
+			const event = createdEvents.find(
+				(c) => new Date(c.date).getTime() === eventDate.getTime()
+			);
 			if (!event) {
+				console.error(`Event not found for date: ${date}`);
+				console.log(
+					"Available event dates:",
+					createdEvents.map((e) => e.date)
+				);
 				throw new Error(`Event not found for date: ${date}`);
 			}
 

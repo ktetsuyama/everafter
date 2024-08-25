@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Auth from "../utils/auth";
-import bannerLogo from "../assets/logo.svg";
+import bannerLogo from "../assets/everafter.svg";
 
 const Header = () => {
 	// Check device width

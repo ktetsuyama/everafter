@@ -5,14 +5,21 @@ require("dotenv").config();
 const secret = process.env.SECRET_KEY;
 const expiration = "2h";
 
+class AuthenticationError extends GraphQLError {
+	constructor(message) {
+		super(message, {
+			extensions: {
+				code: "UNAUTHENTICATED",
+			},
+		});
+	}
+}
+
 module.exports = {
-AuthenticationError: new GraphQLError("Could not authenticate user.", {
-    extensions: {
-      code: "UNAUTHENTICATED",
-    },
-  }),
-  authMiddleware: function ({ req }) {
-    let token = req.body.token || req.query.token || req.headers.authorization;
+	AuthenticationError,
+	authMiddleware: function ({ req }) {
+		let token =
+			req.body.token || req.query.token || req.headers.authorization;
 
 		if (req.headers.authorization) {
 			token = token.split(" ").pop().trim();
