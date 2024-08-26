@@ -17,7 +17,15 @@ export default function ErrorPage() {
 					<div className="card bg-primary text-white mt-2 py-1">
 						<h1>Oops!</h1>
 					</div>
-					<img src={errorLogo} alt="Error image" />
+					<img
+						src={errorLogo}
+						alt="Error image"
+						style={{
+							maxWidth: "100%",
+							height: "auto",
+							display: "block",
+						}}
+					/>
 					<div className="card bg-primary text-white mt-2 p-3">
 						<p>Looks like we encountered an unexpected issue.</p>
 						<h3 className="text-danger">

@@ -55,11 +55,11 @@ export const UPDATE_USER = gql`
 `;
 
 export const ADD_PHOTO = gql`
-  mutation addPhoto() {
-    addPhoto(photoId: $photoId) {
-      _id
-    }
-  }
+	mutation addPhoto($photoId: ID!) {
+		addPhoto(photoId: $photoId) {
+			_id
+		}
+	}
 `;
 
 export const REMOVE_PHOTO = gql`

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useQuery, useMutation } from "@apollo/client";
 import { QUERY_ME } from "../utils/queries";
-import { UPDATE_USER, ADD_USER_CARD, ADD_ADMIN_CARD } from "../utils/mutations";
+import { UPDATE_USER, ADD_EVENT, ADD_PHOTO } from "../utils/mutations";
 import Auth from "../utils/auth";
 // import CardStack from "../components/CardStack";
 import UpdateForm from "../components/UpdateForm";
@@ -45,8 +45,8 @@ const Profile = () => {
 	// Fetch data for logged-in user
 	const { loading, data, refetch } = useQuery(QUERY_ME);
 	const [updateUser] = useMutation(UPDATE_USER);
-	const [addUserCard] = useMutation(ADD_USER_CARD);
-	const [addAdminCard] = useMutation(ADD_ADMIN_CARD);
+	const [addUserCard] = useMutation(ADD_EVENT);
+	const [addAdminCard] = useMutation(ADD_PHOTO);
 
 	// If no user data, return empty object
 	const user = data?.me || {};
