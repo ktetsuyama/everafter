@@ -51,7 +51,7 @@ const Home = () => {
 			</div>
 			<div className="col-12 col-lg-10">
 				<div className="card bg-white mt-2">
-					<h4 className="card-header bg-primary text-white p-2 pl-3">
+					<h4 className="card-header bg-primary text-primary p-2 pl-3">
 						Welcome!
 					</h4>
 					<div className="card-body mx-3">
@@ -61,7 +61,7 @@ const Home = () => {
 			</div>
 			<div className="col-12 col-lg-10">
 				<div className="card bg-white mt-2">
-					<h4 className="card-header bg-primary text-white p-2 pl-3">
+					<h4 className="card-header bg-primary text-primary p-2 pl-3">
 						Our story:
 					</h4>
 					<div className="card-main card-mobile px-2">

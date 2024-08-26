@@ -14,7 +14,7 @@ export default function ErrorPage() {
 			<Header />
 			<main className="container col-12 flex-row text-center justify-center p-5">
 				<div id="error-page">
-					<div className="card bg-primary text-white mt-2 py-1">
+					<div className="card bg-primary text-primary mt-2 py-1">
 						<h1>Oops!</h1>
 					</div>
 					<img
@@ -26,7 +26,7 @@ export default function ErrorPage() {
 							display: "block",
 						}}
 					/>
-					<div className="card bg-primary text-white mt-2 p-3">
+					<div className="card bg-primary text-primary mt-2 p-3">
 						<p>Looks like we encountered an unexpected issue.</p>
 						<h3 className="text-danger">
 							Error: {error.status}{" "}

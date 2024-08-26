@@ -83,7 +83,12 @@ const CardStack = ({ cards = [], userId }) => {
 				variables: {
 					cardId: card._id,
 				},
-				refetchQueries: [QUERY_ME, "me", QUERY_FAVORITES, "getFavorites"],
+				refetchQueries: [
+					QUERY_ME,
+					"me",
+					QUERY_FAVORITES,
+					"getFavorites",
+				],
 			});
 			setFavoriteId(data.addFavorite._id);
 		} catch (error) {
@@ -97,7 +102,12 @@ const CardStack = ({ cards = [], userId }) => {
 				variables: {
 					favoriteId: favoriteId, // Use the favoriteId state
 				},
-				refetchQueries: [QUERY_ME, "me", QUERY_FAVORITES, "getFavorites"],
+				refetchQueries: [
+					QUERY_ME,
+					"me",
+					QUERY_FAVORITES,
+					"getFavorites",
+				],
 			});
 			setFavoriteId(null);
 			handleNext();
@@ -149,7 +159,7 @@ const CardStack = ({ cards = [], userId }) => {
 		<>
 			<div>
 				{/* Card concept */}
-				<div className="card bg-primary text-white text-center mt-2 px-0 pt-2 pb-1">
+				<div className="card bg-primary text-primary text-center mt-2 px-0 pt-2 pb-1">
 					<h4>{card && cardConcept}</h4>
 				</div>
 				<ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
@@ -158,11 +168,13 @@ const CardStack = ({ cards = [], userId }) => {
 						onClick={handleFlip}
 						className="card bg-white text-center mt-2 p-0"
 					>
-						<h5 className="card-header bg-primary text-white p-2 pl-3">
+						<h5 className="card-header bg-primary text-primary p-2 pl-3">
 							{card && card.question}
 						</h5>
 						<div className="p-4 m-3 bg-white btn btn-white flip-content">
-							<span style={{ fontStyle: "italic" }}>Click to show answer</span>
+							<span style={{ fontStyle: "italic" }}>
+								Click to show answer
+							</span>
 						</div>
 					</div>
 					{/* Card back */}
@@ -170,7 +182,7 @@ const CardStack = ({ cards = [], userId }) => {
 						onClick={handleFlip}
 						className="card bg-white text-center mt-2 p-0"
 					>
-						<h5 className="card-header bg-primary text-white p-2 pl-3">
+						<h5 className="card-header bg-primary text-primary p-2 pl-3">
 							{card && card.question}
 						</h5>
 						<div className="p-4 m-3 bg-white btn btn-white flip-content">
@@ -179,7 +191,7 @@ const CardStack = ({ cards = [], userId }) => {
 					</div>
 				</ReactCardFlip>
 				{/* Card nav buttons */}
-				<div className="card bg-primary text-white text-center mt-2 p-0">
+				<div className="card bg-primary text-primary text-center mt-2 p-0">
 					<div className="w-100 text-center">
 						<button
 							onClick={handleBack}
@@ -206,7 +218,9 @@ const CardStack = ({ cards = [], userId }) => {
 						<>
 							<button
 								onClick={
-									isFavorite() ? handleRemoveFavorite : handleAddFavorite
+									isFavorite()
+										? handleRemoveFavorite
+										: handleAddFavorite
 								}
 								className="btn btn-lg btn-primary w-50"
 								style={{
@@ -227,9 +241,13 @@ const CardStack = ({ cards = [], userId }) => {
 							</button>
 							<button
 								onClick={toggleUpdateForm}
-								disabled={!userId || userId !== card.createdBy._id}
+								disabled={
+									!userId || userId !== card.createdBy._id
+								}
 								className={`btn btn-lg btn-primary w-50 ${
-									!userId || userId !== card.createdBy._id ? "disabled-btn" : ""
+									!userId || userId !== card.createdBy._id
+										? "disabled-btn"
+										: ""
 								}`}
 								style={{
 									borderLeft: "1px solid slateGray",
@@ -239,7 +257,10 @@ const CardStack = ({ cards = [], userId }) => {
 										!userId || userId !== card.createdBy._id
 											? "not-allowed"
 											: "pointer",
-									opacity: !userId || userId !== card.createdBy._id ? 0.5 : 1,
+									opacity:
+										!userId || userId !== card.createdBy._id
+											? 0.5
+											: 1,
 								}}
 							>
 								Update<span>&#9999;</span>
@@ -247,7 +268,9 @@ const CardStack = ({ cards = [], userId }) => {
 							{userId === card.createdBy._id && (
 								<button
 									onClick={handleDeleteCard}
-									disabled={!userId || userId !== card.createdBy._id}
+									disabled={
+										!userId || userId !== card.createdBy._id
+									}
 									className={`btn btn-lg btn-danger w-100 ${
 										!userId || userId !== card.createdBy._id
 											? "disabled-btn"
@@ -257,13 +280,19 @@ const CardStack = ({ cards = [], userId }) => {
 										borderRadius: "0 0 5px 5px",
 										borderTop: "1px solid slateGray",
 										cursor:
-											!userId || userId !== card.createdBy._id
+											!userId ||
+											userId !== card.createdBy._id
 												? "not-allowed"
 												: "pointer",
-										opacity: !userId || userId !== card.createdBy._id ? 0.5 : 1,
+										opacity:
+											!userId ||
+											userId !== card.createdBy._id
+												? 0.5
+												: 1,
 									}}
 								>
-									<span>&#128465;</span>Delete<span>&#128465;</span>
+									<span>&#128465;</span>Delete
+									<span>&#128465;</span>
 								</button>
 							)}
 						</>

@@ -119,7 +119,7 @@ const Profile = () => {
 		<>
 			<div className="col-12 col-lg-10">
 				<div className="card bg-white mt-2">
-					<h4 className="card-header bg-primary text-white p-2 pl-3">
+					<h4 className="card-header bg-primary text-primary p-2 pl-3">
 						Welcome to your profile page, {user.username}!
 					</h4>
 					<div className="card-body mx-2">
@@ -143,8 +143,8 @@ const Profile = () => {
 							<button
 								className={
 									isDesktop
-										? "btn btn-md btn-primary text-white mb-3 py-1"
-										: "btn btn-md btn-primary text-white mb-3 py-2 nav-btn"
+										? "btn btn-md btn-primary text-primary mb-3 py-1"
+										: "btn btn-md btn-primary text-primary mb-3 py-2 nav-btn"
 								}
 								onClick={toggleUpdateForm}
 							>
@@ -180,8 +180,8 @@ const Profile = () => {
 							<button
 								className={
 									isDesktop
-										? "btn btn-md btn-primary text-white mb-3 py-1"
-										: "btn btn-md btn-primary text-white mb-3 py-2 nav-btn"
+										? "btn btn-md btn-primary text-primary mb-3 py-1"
+										: "btn btn-md btn-primary text-primary mb-3 py-2 nav-btn"
 								}
 								onClick={() => toggleCreateEventForm("user")}
 							>
@@ -192,7 +192,7 @@ const Profile = () => {
 							<button
 								className={
 									isDesktop
-										? "btn btn-sm btn-primary text-white mb-3 py-1"
+										? "btn btn-sm btn-primary text-primary mb-3 py-1"
 										: "btn btn-md btn-link text-black mb-3 py-2 nav-btn"
 								}
 								onClick={() => toggleCreateEventForm("admin")}

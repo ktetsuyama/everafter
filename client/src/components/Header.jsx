@@ -44,7 +44,7 @@ const Header = () => {
 					<Link to="/">
 						<img src={bannerLogo} alt="EverAfter banner logo" />
 					</Link>
-					<p className="m-0 text-white">
+					<p className="m-0 text-primary">
 						Tell your tale, memorialize your love!
 					</p>
 				</div>

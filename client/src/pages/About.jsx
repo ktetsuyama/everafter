@@ -28,7 +28,7 @@ const About = () => {
 		<>
 			<div className="col-12 col-lg-10">
 				<div className="card bg-white mt-2">
-					<h4 className="card-header bg-primary text-white p-2 pl-3">
+					<h4 className="card-header bg-primary text-primary p-2 pl-3">
 						About me
 					</h4>
 					<div className="card-body mx-2">
@@ -50,7 +50,7 @@ const About = () => {
 					</div>
 				</div>
 				<div className="card bg-white mt-2">
-					<h4 className="card-header bg-primary text-white p-2 pl-3">
+					<h4 className="card-header bg-primary text-primary p-2 pl-3">
 						Links
 					</h4>
 					<div className="card-body mx-2">

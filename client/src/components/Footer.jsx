@@ -3,9 +3,9 @@ import ExpandableNav from "../components/ExpandableNav";
 
 const Footer = () => {
 	return (
-		<footer className="w-100 mt-5 mb-2 bg-white">
+		<footer className="w-100 mt-5 mb-2 bg-footer">
 			<div className="padding">
-				<div className="container col-12 display-flex justify-space-between my-5 px-5">
+				<div className="container col-12 display-flex justify-space-between my-5 px-5 bg-footer-card">
 					<div
 						className="col-6 text-left py-2"
 						style={{

@@ -19,6 +19,7 @@ html {
  */
 body {
 	margin: 0;
+	background-color: #edede2;
 }
 
 /**
@@ -921,7 +922,7 @@ a:hover {
 }
 
 .text-primary {
-	color: #edede2 !important;
+	color: #b400ff !important;
 }
 
 .text-info {
@@ -945,7 +946,7 @@ a:hover {
 }
 
 .text-white {
-	color: #b400ff !important;
+	color: #ffffff !important;
 }
 
 .text-black {
@@ -985,12 +986,22 @@ a:hover {
 	background-color: #000000 !important;
 }
 
-.bg-#edede2 {
+.bg-orange {
 	background-color: #ffa500 !important;
 }
 
 .bg-link {
 	background-color: #1b89bc !important;
+}
+
+.bg-footer {
+	background-color: #e4e4d8 !important;
+}
+
+.bg-footer-card {
+	background-color: #fde0fd !important;
+	border-radius: 0.3rem;
+	box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
 }
 
 /* DISPLAY */
@@ -1813,7 +1824,7 @@ label form [type="radio"] {
 	}
 	.nav-btn {
 		background-color: #edede2;
-		color: #fff;
+		color: #b400ff;
 		border: none;
 		border-radius: 10px;
 		width: 90%;
@@ -1825,7 +1836,7 @@ label form [type="radio"] {
 	}
 	.nav-btn:hover {
 		color: #fff;
-		background-color: #436284;
+		background-color: #fde0fd;
 		text-decoration: none;
 	}
 	.mobile {
@@ -1969,10 +1980,10 @@ label form [type="radio"] {
 footer {
 	padding-bottom: 10vh;
 	height: 20%;
-	color: #fde0fd;
+	color: #b400ff;
 }
 footer a {
-	color: #fde0fd;
+	color: #b400ff;
 	transition: color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 footer a:hover {

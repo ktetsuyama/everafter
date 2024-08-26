@@ -44,7 +44,7 @@ const CreateEventForm = ({ onCreate, onCancel }) => {
 
 	return (
 		<div className="form-container card w-50">
-			<h4 className="card-header bg-primary text-white p-2 pl-3">
+			<h4 className="card-header bg-primary text-primary p-2 pl-3">
 				Create a New Event
 			</h4>
 			<form className="card-body px-3" onSubmit={handleSubmit}>
@@ -84,13 +84,13 @@ const CreateEventForm = ({ onCreate, onCancel }) => {
 				</div>
 				<button
 					type="submit"
-					className="btn btn-md btn-primary text-white mt-3 mb-1 nav-btn w-100"
+					className="btn btn-md btn-primary text-primary mt-3 mb-1 nav-btn w-100"
 				>
 					Submit
 				</button>
 				<button
 					type="button"
-					className="btn btn-md btn-danger text-white mt-1 mb-2 nav-btn w-100"
+					className="btn btn-md btn-danger text-primary mt-1 mb-2 nav-btn w-100"
 					onClick={onCancel}
 				>
 					Cancel
